@@ -115,6 +115,11 @@ a:hover {
   vertical-align: middle;
 }
 
+/*--/ Sign In /--*/
+.g-signin2 {
+  display: block;
+}
+
 /*--/ Sections /--*/
 .sect-4 {
   padding: 4rem 0;

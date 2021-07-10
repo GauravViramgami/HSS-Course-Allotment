@@ -306,7 +306,7 @@
       $(e).append("<option value='" + value[0] + "'>" + value[0]+" - "+ value[1] + "</option>");
     });
   }
-  
+
   /*--/ Name /--*/
   $('#name').change(function () {
     if (!$('#name').val()) {

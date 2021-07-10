@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="282658584006-4s9aki5q48efj5soll1rprn806q6b94f.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
   <link rel="shortcut icon" type="image/jpg" href="assets/img/iitgn_logo-1.png"/>
   <title>HSS Pre-Registration</title>
   <meta content="" name="description">
@@ -41,7 +44,13 @@
     </div>
   </div>
 
-  <main id="main">
+  <div id="my-signin-div" class="sign-in-div">
+    <br><br>
+    <!-- ======= Google Sign In ======= -->
+    <div class="g-signin2 d-flex justify-content-center" data-onsuccess="onSignIn" data-theme="dark"></div>
+  </div>
+
+  <main id="main" class="main">
 
     <!-- ======= Research Section ======= -->
     <section class="blog-wrapper sect-pt4" id="research">
@@ -66,18 +75,18 @@
                     Name <sup class="required">*</sup>
                     <br>
                   </p>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Your Answer" />
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Your Answer" readonly/>
                   <p class="error-msg" id="name-error"></p>
                 </div>
               </div>
-              
+
               <div class="post-box remove-padding">
                 <div class="row widget-sidebar form-group">
                   <p>
                     Email <sup class="required">*</sup>
                     <br>
                   </p>
-                  <input type="text" class="form-control" id="email" name="email" placeholder="Your Answer" />
+                  <input type="text" class="form-control" id="email" name="email" placeholder="Your Answer" readonly />
                   <p class="error-msg" id="email-error"></p>
                 </div>
               </div>
@@ -209,6 +218,25 @@
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/wow/wow.min.js"></script>
 
+  <!-- Sign In Script -->
+  <script>
+    // Hide the form
+    document.getElementById("research").style.display = "none";
+    document.getElementById("my-signin-div").style.display = "block";
+    function onSignIn(googleUser) {
+      // Useful data for your client-side scripts:
+      var profile = googleUser.getBasicProfile();
+      let user_name = profile.getName();
+      let user_email = profile.getEmail();
+
+      // Change Name and Email field values
+      document.getElementById("name").value = user_name;
+      document.getElementById("email").value = user_email;
+
+      // Display the form
+      document.getElementById("research").style.display = "block";
+    }
+  </script>
   <!-- Template Main JS File -->
   <script src="assets/js/index.js"></script>
 
