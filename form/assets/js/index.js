@@ -783,17 +783,39 @@
       i += 1;
     }
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbydsm9liXMOtru9hjsGcGeVe-3fR82M7VkkV7RVUV9j06vwMxXSDQTDnVvfrv75ukmqMQ/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbygNCzWC1ShfWSrQ6rKcNqSb6wEoKEzGxXKcatfUJQsyFHuZdpHQFh8kIEcFsiNZ6cM/exec';
+    
     $.get(scriptURL, form_data, function(response){
       $('form').off('submit',$.fn.wait);
       if(response.result=="success"){
         swal("Success!", "Your response was recorded!", "success").then(value => {$('form').submit();});
       }
       else{
+        console.log(response.error);
         $('form').on('submit',$.fn.form_submit);
         swal("Error!", "There was an error in submitting the form. Please try again.", "error");
       }
     });
+
+    // // Replace the code for GET request with this one in case of CORS error
+    // var jqxhr = $.ajax({
+    //   url: scriptURL,
+    //   method: "GET",
+    //   dataType: "json",
+    //   data: form_data
+    // })
+    // .then(function(response){
+    //   $('form').off('submit',$.fn.wait);
+    //   if(response.result=="success"){
+    //     swal("Success!", "Your response was recorded!", "success").then(value => {$('form').submit();});
+    //   }
+    //   else{
+    //     $('form').on('submit',$.fn.form_submit);
+    //     swal("Error!", "There was an error in submitting the form. Please try again.", "error");
+    //   }
+    // })
+    // .catch(err => console.log(err));
+
     $('form').off('submit',$.fn.form_submit);
     $('form').on('submit',$.fn.wait);
     return false;

@@ -182,7 +182,7 @@
                       Preference #1 <sup class="required">*</sup>
                       <br>
                     </p>
-                    <select class="form-control prefs" id="pref1" name="pref1" placeholder="Your Answer">
+                    <select class="form-control prefs" id="pref1" name="pref1" placeholder="Your Answer" style="width:1500px">
                       <option value="-Select-">-Select-</option>
                     </select>
                     <p class="error-msg" id="pref1-error"></p>
@@ -222,7 +222,6 @@
   <script>
     // Hide the form
     document.getElementById("research").style.display = "none";
-    document.getElementById("my-signin-div").style.display = "block";
     function onSignIn(googleUser) {
       // Useful data for your client-side scripts:
       var profile = googleUser.getBasicProfile();
