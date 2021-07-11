@@ -430,27 +430,27 @@
     }
   });
 
-  /*--/ Unique Code /--*/
-  $('#code').change(function () {
-    if (!$('#code').val()) {
-      $(this).css("border-color", error_color);
-      $(this).css("border-width", error_width);
-      $('#code-error').css("display", "block");
-      $('#code-error').text("This is a required question");
-    }
-    else if($('#code').val().length !== code_length){
-      $(this).css("border-color", error_color);
-      $(this).css("border-width", error_width);
-      $('#code-error').css("display", "block");
-      $('#code-error').text("The Unique Code shared with you is of length 8");
-    }
-    else {
-      $(this).css("border-color", border_color);
-      $(this).css("border-width", border_width);
-      $('#code-error').css("display", "none");
-      $('#code-error').text("");
-    }
-  });
+  // /*--/ Unique Code /--*/
+  // $('#code').change(function () {
+  //   if (!$('#code').val()) {
+  //     $(this).css("border-color", error_color);
+  //     $(this).css("border-width", error_width);
+  //     $('#code-error').css("display", "block");
+  //     $('#code-error').text("This is a required question");
+  //   }
+  //   else if($('#code').val().length !== code_length){
+  //     $(this).css("border-color", error_color);
+  //     $(this).css("border-width", error_width);
+  //     $('#code-error').css("display", "block");
+  //     $('#code-error').text("The Unique Code shared with you is of length 8");
+  //   }
+  //   else {
+  //     $(this).css("border-color", border_color);
+  //     $(this).css("border-width", border_width);
+  //     $('#code-error').css("display", "none");
+  //     $('#code-error').text("");
+  //   }
+  // });
 
   /*--/ Number of Courses /--*/
   $('#num-reg').attr("max", max_reg);
@@ -489,8 +489,10 @@
 
   $('#num-pref').attr("max", num_courses);
   $.fn.add_options('#pref1');
+  $.fn.add_options('#pref2');
   $(document).ready(function () {
     $('#pref1').select2();
+    $('#pref2').select2();
   });
 
   $('#num-pref').change(function () {
@@ -588,6 +590,22 @@
     }
   });
 
+  /*--/ Check Box /--*/
+  $('#check-read').change(function () {
+    if (!$('#check-read').is(":checked")) {
+      $(this).css("border-color", error_color);
+      $(this).css("border-width", error_width);
+      $('#check-read-error').css("display", "block");
+      $('#check-read-error').text("This is a required question");
+    }
+    else {
+      $(this).css("border-color", border_color);
+      $(this).css("border-width", border_width);
+      $('#check-read-error').css("display", "none");
+      $('#check-read-error').text("");
+    }
+  });
+
   /*************************/
   /*--/ Form Validation /--*/
   /*************************/
@@ -681,21 +699,21 @@
       }
     }
 
-    /* Validating Unique Code */
-    if (!$('#code').val()) {
-      failed = true;
-      $('#code-error').css("display", "block");
-      $('#code-error').text("This is a required question");
-      $('#code').css("border-color", error_color);
-      $('#code').css("border-width", error_width);
-    }
-    else if($('#code').val().length !== code_length){
-      failed = true;
-      $('#code').css("border-color", error_color);
-      $('code').css("border-width", error_width);
-      $('#code-error').css("display", "block");
-      $('#code-error').text("The Unique Code shared with you is of length 8");
-    }
+    // /* Validating Unique Code */
+    // if (!$('#code').val()) {
+    //   failed = true;
+    //   $('#code-error').css("display", "block");
+    //   $('#code-error').text("This is a required question");
+    //   $('#code').css("border-color", error_color);
+    //   $('#code').css("border-width", error_width);
+    // }
+    // else if($('#code').val().length !== code_length){
+    //   failed = true;
+    //   $('#code').css("border-color", error_color);
+    //   $('code').css("border-width", error_width);
+    //   $('#code-error').css("display", "block");
+    //   $('#code-error').text("The Unique Code shared with you is of length 8");
+    // }
 
     /* Number of Courses Required */
     if ((!$.isNumeric($('#num-reg').val())) || ($('#num-reg').val() > max_reg) || ($('#num-reg').val() < 1)){
@@ -760,6 +778,15 @@
         }
         i += 1;
       }
+    }
+
+    /* Validating Check Box */
+    if (!$('#check-read').is(":checked")) {
+      failed = true;
+      $('#check-read-error').css("display", "block");
+      $('#check-read-error').text("This is a required question");
+      $('#check-read').css("border-color", error_color);
+      $('#check-read').css("border-width", error_width);
     }
 
     if (failed) {
