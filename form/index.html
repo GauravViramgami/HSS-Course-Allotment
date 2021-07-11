@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta name="google-signin-scope" content="profile email">
   <meta name="google-signin-client_id" content="282658584006-4s9aki5q48efj5soll1rprn806q6b94f.apps.googleusercontent.com">
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
   <link rel="shortcut icon" type="image/jpg" href="assets/img/iitgn_logo-1.png"/>
   <title>HSS Pre-Registration</title>
   <meta content="" name="description">
@@ -45,7 +45,10 @@
   </div>
 
   <div id="my-signin-div" class="sign-in-div">
-    <br><br>
+    <br>
+    <div id="sign-in-change-text" class="sign-in-change-text text-center">Sign In using another IITGN Email Id</div>
+    <br>
+
     <!-- ======= Google Sign In ======= -->
     <div class="g-signin2 d-flex justify-content-center" data-onsuccess="onSignIn" data-theme="dark"></div>
   </div>
@@ -218,15 +221,53 @@
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/wow/wow.min.js"></script>
 
+  <!-- Template Main JS File -->
+  <script src="assets/js/index.js"></script>
+
   <!-- Sign In Script -->
   <script>
     // Hide the form
     document.getElementById("research").style.display = "none";
+
+    // Load Gapi
+    window.onLoadCallback = function(){
+      console.log("called");
+      gapi.load('auth2', initSigninV2);
+    }
+
+    // Load auth2
+    function initSigninV2() {
+        gapi.auth2.init().then(function (authInstance) {
+            signOut();
+        });
+    }
+    
+    // Sign Out
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        document.getElementById("research").style.display = "none";
+        console.log('User signed out.');
+      });
+
+      // Disconnect auth
+      auth2.disconnect();
+    }
+
+    function disconnect() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.disconnect();
+    }
+
+    // signOut();
+
+    // Sign In
     function onSignIn(googleUser) {
       // Useful data for your client-side scripts:
       var profile = googleUser.getBasicProfile();
       let user_name = profile.getName();
       let user_email = profile.getEmail();
+      console.log("SignIn");
 
       // Change Name and Email field values
       document.getElementById("name").value = user_name;
@@ -234,10 +275,12 @@
 
       // Display the form
       document.getElementById("research").style.display = "block";
+      document.getElementById("sign-in-change-text").innerHTML = "Currently signed in as: " + user_email + "<br>Sign in using another IITGN Email Id"
+      document.getElementById("sign-in-change-text").style.display = "block";
+
+      disconnect();
     }
   </script>
-  <!-- Template Main JS File -->
-  <script src="assets/js/index.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
