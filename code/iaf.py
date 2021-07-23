@@ -35,8 +35,9 @@ class IAF:
 
         for req_num in range(1, self.max_req+1):
             curr_C = [c for c in self.C if c.rem > 0]  # Remaining Courses
-            # Students who require at least 'req_num' courses
-            curr_S = [s for s in self.S if s.req >= req_num]
+            # Students who require at least 'req_num' courses and has not yet been allocated req_num courses
+            curr_S = [s for s in self.S if (s.req >=
+                                            req_num and len(s.alloc) < req_num)]
 
             while len(curr_S) > 0 and len(curr_C) > 0:
                 self.allocate(curr_C, curr_S, req_num)
