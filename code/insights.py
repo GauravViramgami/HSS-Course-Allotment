@@ -12,7 +12,7 @@ import numpy as np
 ###################################################################################################
 # reading config file for fetching paths
 paths = open("../config.yaml", 'r')
-paths_dictionary = yaml.load(paths)
+paths_dictionary = yaml.safe_load(paths)
 
 # Path where the insight plots are to be stored
 INSIGHTS_PATH = "./insights"
@@ -23,7 +23,7 @@ def autolabel(rects):
     for rect in rects:
         h = rect.get_height()
         plt.text(rect.get_x()+rect.get_width()/2., h//2, '%d' % int(h),
-                 ha='center', Bbox=dict(facecolor='white', alpha=.5))
+                 ha='center', bbox=dict(facecolor='white', alpha=.5))
 
 
 def autolabelTop(rects):
@@ -31,7 +31,7 @@ def autolabelTop(rects):
     for rect in rects:
         h = rect.get_height()
         plt.text(rect.get_x()+rect.get_width()/2., h-5, '%d' % int(h),
-                 ha='center', Bbox=dict(facecolor='white', alpha=.5))
+                 ha='center', bbox=dict(facecolor='white', alpha=.5))
 
 
 def insights(courses, students):

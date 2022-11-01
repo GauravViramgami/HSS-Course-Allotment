@@ -8,7 +8,7 @@
   <meta name="google-signin-client_id" content="282658584006-4s9aki5q48efj5soll1rprn806q6b94f.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
   <link rel="shortcut icon" type="image/jpg" href="assets/img/iitgn_logo-1.png"/>
-  <title>HSS Pre-Registration</title>
+  <title>HSS/MS Registration</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -36,7 +36,7 @@
     <div class="intro-content display-table">
       <div class="table-cell">
         <div class="container">
-          <h1 class="title-a" style="color: white;font-family: 'Raleway';">HSS Course Allocation</h1>
+          <h1 class="title-a" style="color: white;font-family: 'Raleway';">HSS/MS Course Allocation</h1>
           <div class="line-mf mb-5" style="background-color: white;"></div>
           <h5 class="subtitle-a" style="color: white;"></h5>
         </div>
@@ -64,8 +64,8 @@
 
             <div class="post-box remove-padding">
               <div class="row widget-sidebar">
-                <h4 class="sidebar-title" style="font-family: Roboto;">Pre-Registration for HSS Courses - Sem I, 2021-22</h4>
-                <p>Please use this form to submit your preferences for HSS course allocations. Please note that all the fields are mandatory. You must enter the number of HSS courses you wish to take in Semester I, 2021-22. In addition, you must provide a list of preferred HSS courses from which the allocation is to be made. We strongly encourage you to indicate as many preferences as possible. This will maximize the chances of allocation. We also request you to please check the data once before submitting the form.<br><br><span class="required">* Required</span></p>
+                <h4 class="sidebar-title" style="font-family: Roboto;">Registration for HSS/MS Courses - Sem I, 2022-23</h4>
+                <p>Please use this form to submit your preferences for HSS/MS course allocations. Please note that all the fields are mandatory. You must enter the number of HSS/MS courses you wish to take in Semester I, 2022-23. In addition, you must provide a list of preferred HSS/MS courses from which the allocation is to be made. We strongly encourage you to indicate as many preferences as possible. This will maximize the chances of allocation. We also request you to please check the data once before submitting the form.<br><br><span class="required">* Required</span></p>
               </div>
               <div class="col-md-2"></div>
             </div>
@@ -128,7 +128,7 @@
                   <p>
                     Year of Joining <sup class="required">*</sup>
                     <br>
-                    <span class="label-description">Ex: 2017</span>
+                    <span class="label-description">Ex: 2019</span>
                     <br>
                   </p>
                   <input type="text" class="form-control" id="year" name="year" placeholder="Your Answer" />
@@ -173,7 +173,7 @@
                     <br>
                   </p>
                   <br>
-                  <input type="number" min="1" class="form-control" id="num-pref" name="num-pref" value = "2" style="width: 15%;"/>
+                  <input type="number" min="1" class="form-control" id="num-pref" name="num-pref" value = "4" style="width: 15%;"/>
                   <p class="error-msg w-100" id="num-pref-error"></p>
                 </div>
               </div>
@@ -183,6 +183,8 @@
                   <div class="row widget-sidebar form-group">
                     <p>
                       Preference #1 <sup class="required">*</sup>
+                      <br>
+                      <span class="label-description">If the course is not in the list either you have selected it or its cap is already filled in Pre-Registration.</span>
                       <br>
                     </p>
                     <select class="form-control prefs" id="pref1" name="pref1" placeholder="Your Answer" style="width:1500px">
@@ -196,11 +198,41 @@
                     <p>
                       Preference #2 <sup class="required">*</sup>
                       <br>
+                      <span class="label-description">If the course is not in the list either you have selected it or its cap is already filled in Pre-Registration.</span>
+                      <br>
                     </p>
                     <select class="form-control prefs" id="pref2" name="pref2" placeholder="Your Answer" style="width:1500px">
                       <option value="-Select-">-Select-</option>
                     </select>
                     <p class="error-msg" id="pref2-error"></p>
+                  </div>
+                </div>
+                <div id="preference-3" class="post-box remove-padding">
+                  <div class="row widget-sidebar form-group">
+                    <p>
+                      Preference #3 <sup class="required">*</sup>
+                      <br>
+                      <span class="label-description">If the course is not in the list either you have selected it or its cap is already filled in Pre-Registration.</span>
+                      <br>
+                    </p>
+                    <select class="form-control prefs" id="pref3" name="pref3" placeholder="Your Answer" style="width:1500px">
+                      <option value="-Select-">-Select-</option>
+                    </select>
+                    <p class="error-msg" id="pref3-error"></p>
+                  </div>
+                </div>
+                <div id="preference-4" class="post-box remove-padding">
+                  <div class="row widget-sidebar form-group">
+                    <p>
+                      Preference #4 <sup class="required">*</sup>
+                      <br>
+                      <span class="label-description">If the course is not in the list either you have selected it or its cap is already filled in Pre-Registration.</span>
+                      <br>
+                    </p>
+                    <select class="form-control prefs" id="pref4" name="pref4" placeholder="Your Answer" style="width:1500px">
+                      <option value="-Select-">-Select-</option>
+                    </select>
+                    <p class="error-msg" id="pref4-error"></p>
                   </div>
                 </div>
               </div>
@@ -211,7 +243,7 @@
                     <input class="form-check-input" type="checkbox" value="" id="check-read">
                     <label class="form-check-label" for="check-read">
                       <p>
-                        I have thoroughly read all the guidelines here at the link <sup class="required">*</sup>
+                        I have thoroughly read all the guidelines here at the <a href="https://docs.google.com/document/d/1x68I5Aimp6NNQLi2df1dJ7esbu1HZR-hG2xjYi0zGA4/edit?usp=sharing" target="_blank" style="color: blue; text-decoration: underline;">link</a> <sup class="required">*</sup>
                       </p>
                     </label>
                   </div>

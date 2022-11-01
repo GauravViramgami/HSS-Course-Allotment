@@ -108,8 +108,7 @@
       $(this).css("border-width", "3px");
       $('#name-error').css("display", "block");
       $('#name-error').text("This is a required question");
-    }
-    else {
+    } else {
       $(this).css("border-color", border_color);
       $(this).css("border-width", border_width);
       $('#name-error').css("display", "none");
@@ -118,19 +117,17 @@
   });
 
   /*--/ Email /--*/
-  $('#email').change(function(){
-    if (!$('#email').val() || $('#email').val().substring($('#email').val().length-12)!='@iitgn.ac.in'){
+  $('#email').change(function () {
+    if (!$('#email').val() || $('#email').val().substring($('#email').val().length - 12) != '@iitgn.ac.in') {
       $('#email-error').css("display", "block");
       $('#email').css("border-color", "#d93025");
       $('#email').css("border-width", "3px");
-      if(!$('#email').val()){
+      if (!$('#email').val()) {
         $('#email-error').text("This is a required question");
-      }
-      else{
+      } else {
         $('#email-error').text("Invalid Email Address. You must provide your IITGN email address.");
       }
-    }
-    else{
+    } else {
       $('#email-error').css("display", "none");
       $('#email').css("border-color", border_color);
       $('#email').css("border-width", border_width);
@@ -148,23 +145,20 @@
         $(this).css("border-width", border_width);
         $('#roll-error').css("display", "none");
         $('#roll-error').text("");
-      }
-      else {
+      } else {
         $(this).css("border-color", "#d93025");
         $(this).css("border-width", "3px");
         $('#roll-error').css("display", "block");
         $('#roll-error').text("Invalid Input");
 
       }
-    }
-    else {
+    } else {
       if (!$('#roll').val()) {
         $(this).css("border-color", "#d93025");
         $(this).css("border-width", "3px");
         $('#roll-error').css("display", "block");
         $('#roll-error').text("This is a required question");
-      }
-      else {
+      } else {
         $(this).css("border-color", "#d93025");
         $(this).css("border-width", "3px");
         $('#roll-error').css("display", "block");
@@ -180,8 +174,7 @@
       $(this).css("border-width", "3px");
       $('#program-error').css("display", "block");
       $('#program-error').text("This is a required question");
-    }
-    else {
+    } else {
       $(this).css("border-color", border_color);
       $(this).css("border-width", border_width);
       $('#program-error').css("display", "none");
@@ -199,23 +192,20 @@
         $(this).css("border-width", border_width);
         $('#year-error').css("display", "none");
         $('#year-error').text("");
-      }
-      else {
+      } else {
         $(this).css("border-color", "#d93025");
         $(this).css("border-width", "3px");
         $('#year-error').css("display", "block");
         $('#year-error').text("Invalid Input");
 
       }
-    }
-    else {
+    } else {
       if (!$('#year').val()) {
         $(this).css("border-color", "#d93025");
         $(this).css("border-width", "3px");
         $('#year-error').css("display", "block");
         $('#year-error').text("This is a required question");
-      }
-      else {
+      } else {
         $(this).css("border-color", "#d93025");
         $(this).css("border-width", "3px");
         $('#year-error').css("display", "block");
@@ -232,8 +222,7 @@
     if ($(this).is(":checked")) {
       $('#minors-hss').prop("disabled", true);
       $('#minors-management').prop("disabled", true);
-    }
-    else {
+    } else {
       $('#minors-hss').prop("disabled", false);
       $('#minors-management').prop("disabled", false);
     }
@@ -244,12 +233,10 @@
     $('#minors-error').text("");
     if ($(this).is(":checked")) {
       $('#minors-none').prop("disabled", true);
-    }
-    else {
+    } else {
       if ($('#minors-management').is(":checked")) {
         $('#minors-none').prop("disabled", true);
-      }
-      else {
+      } else {
         $('#minors-none').prop("disabled", false);
       }
 
@@ -261,12 +248,10 @@
     $('#minors-error').text("");
     if ($(this).is(":checked")) {
       $('#minors-none').prop("disabled", true);
-    }
-    else {
+    } else {
       if ($('#minors-hss').is(":checked")) {
         $('#minors-none').prop("disabled", true);
-      }
-      else {
+      } else {
         $('#minors-none').prop("disabled", false);
       }
     }
@@ -275,19 +260,18 @@
   /*--/ Number of Courses /--*/
   $('#num-reg').attr("max", num_courses);
   $('#num-reg').change(function () {
-    if (($('#num-reg').val() >= 1 && $('#num-reg').val() <= num_courses) && ( $('#num-reg').val() <= $('#num-pref').val() )) {
+    if (($('#num-reg').val() >= 1 && $('#num-reg').val() <= num_courses) && ($('#num-reg').val() <= $('#num-pref').val())) {
       $('#num-reg-error').css("display", "none");
       $('#num-reg-error').text("");
       $('#num-reg').css("border-color", border_color);
       $('#num-reg').css("border-width", border_width);
-      if($('#num-pref').val() >= 1 && $('#num-pref').val() <= num_courses){
+      if ($('#num-pref').val() >= 1 && $('#num-pref').val() <= num_courses) {
         $('#num-pref-error').css("display", "none");
         $('#num-pref-error').text("");
         $('#num-pref').css("border-color", border_color);
         $('#num-pref').css("border-width", border_width);
       }
-    }
-    else if ($('#num-reg').val() > $('#num-pref').val()){
+    } else if ($('#num-reg').val() > $('#num-pref').val()) {
       $('#num-reg-error').css("display", "block");
       $('#num-reg-error').text("Number of required courses cannot exceed number of preferences");
       $('#num-reg').css("border-color", "#d93025");
@@ -296,8 +280,7 @@
       $('#num-pref-error').text("Number of required courses cannot exceed number of preferences");
       $('#num-pref').css("border-color", "#d93025");
       $('#num-pref').css("border-width", "3px");
-    }
-    else {
+    } else {
       $('#num-reg-error').css("display", "block");
       $('#num-reg-error').text("Value must be between 1 and " + num_courses);
       $('#num-reg').css("border-color", "#d93025");
@@ -319,7 +302,7 @@
       $('#num-pref-error').text("");
       $('#num-pref').css("border-color", border_color);
       $('#num-pref').css("border-width", border_width);
-      if ($('#num-reg').val() > $('#num-pref').val()){
+      if ($('#num-reg').val() > $('#num-pref').val()) {
         $('#num-reg-error').css("display", "block");
         $('#num-reg-error').text("Number of required courses cannot exceed number of preferences");
         $('#num-reg').css("border-color", "#d93025");
@@ -328,13 +311,12 @@
         $('#num-pref-error').text("Number of required courses cannot exceed number of preferences");
         $('#num-pref').css("border-color", "#d93025");
         $('#num-pref').css("border-width", "3px");
-      }
-      else{
+      } else {
         $('#num-pref-error').css("display", "none");
         $('#num-pref-error').text("");
         $('#num-pref').css("border-color", border_color);
         $('#num-pref').css("border-width", border_width);
-        if($('#num-reg').val() >= 1 && $('#num-reg').val() <= num_courses){
+        if ($('#num-reg').val() >= 1 && $('#num-reg').val() <= num_courses) {
           $('#num-reg-error').css("display", "none");
           $('#num-reg-error').text("");
           $('#num-reg').css("border-color", border_color);
@@ -355,8 +337,7 @@
           $('#pref' + v).select2();
           v = v + 1;
         };
-      }
-      else {
+      } else {
         var v = parseInt($(this).val(), 10);
         var w = prefs.length;
         while (w > v) {
@@ -364,8 +345,7 @@
           w -= 1;
         };
       }
-    }
-    else {
+    } else {
       $('#num-pref-error').css("display", "block");
       $('#num-pref-error').text("Number of course preferences must be between 1 and " + num_courses);
       $('#num-pref').css("border-color", "#d93025");
@@ -433,8 +413,7 @@
           $('#course' + v).select2();
           v = v + 1;
         };
-      }
-      else {
+      } else {
         var v = parseInt($(this).val(), 10);
         var w = prefs.length;
         while (w > v) {
@@ -442,8 +421,7 @@
           w -= 1;
         };
       }
-    }
-    else {
+    } else {
       $('#num-least-pref-error').css("display", "block");
       $('#num-least-pref-error').text("Value must be between 0 and " + num_courses);
       $('#num-least-pref').css("border-color", "#d93025");
@@ -511,12 +489,12 @@
   /*--/ Form Validation /--*/
   /*************************/
 
-  $.fn.wait = function(e){
+  $.fn.wait = function (e) {
     e.preventDefault();
     return false;
   }
   // $('form').on('submit',function (e) {
-  $.fn.form_submit = function(e){
+  $.fn.form_submit = function (e) {
     e.preventDefault();
     var failed = false;
 
@@ -527,21 +505,19 @@
       $('#name-error').text("This is a required question");
       $('#name').css("border-color", "#d93025");
       $('#name').css("border-width", "3px");
-    }
-    else {
+    } else {
       $('#name').change();
     }
 
     /* Validating Email */
-    if (!$('#email').val() || $('#email').val().substring($('#email').val().length-12)!='@iitgn.ac.in'){
+    if (!$('#email').val() || $('#email').val().substring($('#email').val().length - 12) != '@iitgn.ac.in') {
       failed = true;
       $('#email-error').css("display", "block");
       $('#email').css("border-color", "#d93025");
       $('#email').css("border-width", "3px");
-      if(!$('#email').val()){
+      if (!$('#email').val()) {
         $('#email-error').text("This is a required question");
-      }
-      else{
+      } else {
         $('#email-error').text("Invalid Email Address. You must provide your IITGN email address.");
       }
     }
@@ -554,12 +530,10 @@
       $('#roll').css("border-width", "3px");
       if (!$('#roll').val()) {
         $('#roll-error').text("This is a required question");
-      }
-      else {
+      } else {
         $('#roll-error').text("Invalid Input");
       }
-    }
-    else {
+    } else {
       $('#roll').change();
     }
 
@@ -570,15 +544,13 @@
       $('#program-error').text("This is a required question");
       $('#program').css("border-color", "#d93025");
       $('#program').css("border-width", "3px");
-    }
-    else if ($.inArray($('#program').val(), programs) == -1) {
+    } else if ($.inArray($('#program').val(), programs) == -1) {
       failed = true;
       $('#program-error').css("display", "block");
       $('#program-error').text("Invaid Input");
       $('#program').css("border-color", "#d93025");
       $('#program').css("border-width", "3px");
-    }
-    else {
+    } else {
       $('#program-error').css("display", "none");
       $('#program-error').text("");
       $('#program').css("border-color", border_color);
@@ -597,8 +569,7 @@
       $('#year').css("border-width", "3px");
       if (!$('#year').val()) {
         $('#year-error').text("This is a required question");
-      }
-      else {
+      } else {
         $('#year-error').text("Invalid Input");
       }
     }
@@ -614,8 +585,7 @@
       $('#minors-management').prop('disabled', false);
       $('#minors-error').css("display", "block");
       $('#minors-error').text("Invalid Input");
-    }
-    else if (!$('#minors-none').is(':checked') && !$('#minors-hss').is(":checked") && !$('#minors-management').is(":checked")) {
+    } else if (!$('#minors-none').is(':checked') && !$('#minors-hss').is(":checked") && !$('#minors-management').is(":checked")) {
       failed = true;
       $('#minors-none').prop('disabled', false);
       $('#minors-hss').prop('disabled', false);
@@ -633,8 +603,8 @@
       $('#num-reg').css("border-width", "3px");
     }
 
-    if ($('#num-reg').val()>$('#num-pref')){
-      failed= true;
+    if ($('#num-reg').val() > $('#num-pref')) {
+      failed = true;
       $('#num-reg-error').css("display", "block");
       $('#num-reg-error').text("Number of required courses cannot exceed number of preferences");
       $('#num-reg').css("border-color", "#d93025");
@@ -649,7 +619,7 @@
     /* Validating Number of Preferences */
     if (!$.isNumeric($('#num-pref').val()) || $('#num-pref').val() > num_courses || $('#num-pref').val() < 1) {
       failed = true;
-      num_pref_invalid= true;
+      num_pref_invalid = true;
       $('#num-pref-error').css("display", "block");
       $('#num-pref').css("border-color", "#d93025");
       $('#num-pref').css("border-width", "3px");
@@ -657,7 +627,7 @@
     }
 
     /* Validating Course Preferences */
-    if (!num_pref_invalid){
+    if (!num_pref_invalid) {
       var num_prefs = parseInt($('#num-pref').val(), 10);
       var i = 1;
       while (i <= num_prefs) {
@@ -668,7 +638,7 @@
           $('#pref' + i).css("border-color", "#d93025");
           $('#pref' + i).css("border-width", "3px");
           $('#pref' + i + '-error').text("Please select a course");
-          i+=1;
+          i += 1;
           continue;
         }
         while (j <= num_prefs) {
@@ -693,7 +663,7 @@
     /* Validating Number of Least Prefs */
     if (!$.isNumeric($('#num-least-pref').val()) || $('#num-least-pref').val() > num_courses || $('#num-least-pref').val() < 0) {
       failed = true;
-      num_least_pref_invalid= true;
+      num_least_pref_invalid = true;
       $('#num-least-pref-error').css("display", "block");
       $('#num-least-pref').css("border-color", "#d93025");
       $('#num-least-pref').css("border-width", "3px");
@@ -713,7 +683,7 @@
           $('#course' + i).css("border-color", "#d93025");
           $('#course' + i).css("border-width", "3px");
           $('#course' + i + '-error').text("Please select a course");
-          i+=1;
+          i += 1;
           continue;
         }
         var k = 1;
@@ -747,7 +717,9 @@
     }
 
     if (failed) {
-      $('html, body').animate({scrollTop: $("#main").offset().top}, 2000);
+      $('html, body').animate({
+        scrollTop: $("#main").offset().top
+      }, 2000);
       return false;
     }
     var form_data = {
@@ -763,9 +735,9 @@
     };
     if ($('#minors-none').is(':checked')) {
       form_data['Minors'] = 'None';
-    }
-    else {
-      var s1 = '', s2 = '';
+    } else {
+      var s1 = '',
+        s2 = '';
       if ($('#minors-hss').is(':checked')) {
         s1 = 'HSS, ';
       }
@@ -788,20 +760,21 @@
       i += 1;
     }
     const scriptURL = 'https://script.google.com/macros/s/AKfycbywNlOA24uj2rIdAC_9gIMr--lE9tGs-PyNZhojGQLD7CvbOhpxO0NyP95r-bYepwMQwA/exec';
-    $.get(scriptURL, form_data, function(response){
-      $('form').off('submit',$.fn.wait);
-      if(response.result=="success"){
-        swal("Success!", "Your response was recorded!", "success").then(value => {$('form').submit();});
-      }
-      else{
-        $('form').on('submit',$.fn.form_submit);
+    $.get(scriptURL, form_data, function (response) {
+      $('form').off('submit', $.fn.wait);
+      if (response.result == "success") {
+        swal("Success!", "Your response was recorded!", "success").then(value => {
+          $('form').submit();
+        });
+      } else {
+        $('form').on('submit', $.fn.form_submit);
         swal("Error!", "There was an error in submitting the form. Please try again.", "error");
       }
     });
-    $('form').off('submit',$.fn.form_submit);
-    $('form').on('submit',$.fn.wait);
+    $('form').off('submit', $.fn.form_submit);
+    $('form').on('submit', $.fn.wait);
     return false;
   };
-  $('form').on('submit',$.fn.form_submit);
+  $('form').on('submit', $.fn.form_submit);
 
 })(jQuery);

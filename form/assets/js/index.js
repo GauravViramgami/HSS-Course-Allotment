@@ -86,224 +86,314 @@
   var code_length = 8;
   // https://beautifytools.com/excel-to-json-converter.php
   var courses = {
-    "Sheet1": [
-        {
-            "Course Code": "IN 304",
-            "Course Title": "Ancient Indian Technology",
-            "L": "3",
-            "T": "1",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Alok Kumar Kanungo (I+T)",
-            "Time Slot Lecture": "H",
-            "Time Slot Tutorial": "I3",
-            "Cap": "40"
-        },
-        {
-            "Course Code": "HS 104 ",
-            "Course Title": "Foundational Sanskrit",
-            "L": "3",
-            "T": "1",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Mana Shah (I+T)",
-            "Time Slot Lecture": "G",
-            "Time Slot Tutorial": "P1",
-            "Cap": "40"
-        },
-        {
-            "Course Code": "HS 111 ",
-            "Course Title": "Urdu Script & Poetry",
-            "L": "3",
-            "T": "1",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Mohd. Mubashshir Ahsan (I+T)",
-            "Time Slot Lecture": "R",
-            "Time Slot Tutorial": "P1",
-            "Cap": "40"
-        },
-        {
-            "Course Code": "HS 112 ",
-            "Course Title": "Urdu Poetry Interpretation",
-            "L": "3",
-            "T": "1",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Mohd. Mubashshir Ahsan (I+T)",
-            "Time Slot Lecture": "J",
-            "Time Slot Tutorial": "P2",
-            "Cap": "40"
-        },
-        {
-            "Course Code": "HS 211",
-            "Course Title": "Introduction to the History of Science and Technology in India",
-            "L": "3",
-            "T": "0",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Michel Danino",
-            "Time Slot Lecture": "L",
-            "Cap": "40"
-        },
-        {
-            "Course Code": "HS 223 ",
-            "Course Title": "Sanskrit Literature",
-            "L": "3",
-            "T": "1",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Mana Shah (I+T)",
-            "Time Slot Lecture": "J",
-            "Time Slot Tutorial": "P2",
-            "Cap": "40"
-        },
-        {
-            "Course Code": "HS 313 ",
-            "Course Title": "When You Cannot Experiment: Social Science Methods",
-            "L": "3",
-            "T": "0",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Malavika Subramanyam",
-            "Time Slot Lecture": "J",
-            "Cap": "40"
-        },
-        {
-            "Course Code": "HS 421 ",
-            "Course Title": "Introduction to Linguistics",
-            "L": "3",
-            "T": "0",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Nishaant Choksi",
-            "Time Slot Lecture": "L",
-            "Cap": "40"
-        },
-        {
-            "Course Code": "HS 425 ",
-            "Course Title": "Introduction to Archaeology",
-            "L": "3",
-            "T": "0",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Sharada Channarayapatna",
-            "Time Slot Lecture": "H",
-            "Cap": "40"
-        },
-        {
-            "Course Code": "HS 505",
-            "Course Title": "Research Methods in Humanities and Social Sciences",
-            "L": "3",
-            "T": "0",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Ambika Aiyadurai, Malavika Subramanyam",
-            "Time Slot Lecture": "D",
-            "Cap": "10"
-        },
-        {
-            "Course Code": "HS 507 ",
-            "Course Title": "Humanism, Anti-Humanism, and Posthumanism",
-            "L": "3",
-            "T": "0",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Angus McBlane",
-            "Time Slot Lecture": "H",
-            "Cap": "40"
-        },
-        {
-            "Course Code": "HS 510 ",
-            "Course Title": "Perspectives on Indian Civilization",
-            "L": "3",
-            "T": "0",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Michel Danino (I)",
-            "Time Slot Lecture": "E",
-            "Cap": "10"
-        },
-        {
-            "Course Code": "HS 512",
-            "Course Title": "Political Thought",
-            "L": "3",
-            "T": "0",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Dyotana Banerjee (I)",
-            "Time Slot Lecture": "K",
-            "Cap": "10"
-        },
-        {
-            "Course Code": "HS 517",
-            "Course Title": "Literary Experiment in European Modernism",
-            "L": "3",
-            "T": "0",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Arka Chattopadhyay",
-            "Time Slot Lecture": "K",
-            "Cap": "40"
-        },
-        {
-            "Course Code": "HS 519 ",
-            "Course Title": "Linguistic Anthropology",
-            "L": "3",
-            "T": "0",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Nishaant Choksi",
-            "Time Slot Lecture": "G",
-            "Cap": "40"
-        },
-        {
-            "Course Code": "HS 645 ",
-            "Course Title": "History of India, 1930-1964",
-            "L": "3",
-            "T": "0",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Madhumita Sengupta",
-            "Time Slot Lecture": "M",
-            "Cap": "40"
-        },
-        {
-            "Course Code": "HS 647",
-            "Course Title": "Literature, Theory, and Social Context",
-            "L": "3",
-            "T": "0",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Angus McBlane (I)",
-            "Time Slot Lecture": "L",
-            "Cap": "10"
-        },
-        {
-            "Course Code": "HS 591",
-            "Course Title": "Special Topics in Humanities and Social Sciences: World English",
-            "L": "3",
-            "T": "0",
-            "P": "0",
-            "C": "4",
-            "Instructor": "Jooyoung Kim (I)",
-            "Time Slot Lecture": "R",
-            "Cap": "40"
-        }
+    "Sheet1": [{
+        "S.No.": "1",
+        "Course Code": "HS 104(R)",
+        "Course Title": "Foundational Sanskrit",
+        "L": "3",
+        "T": "1",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Mana Shah",
+        "Time Slot Lecture": "R1,R2,R3\n",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "38",
+        "Seats left": "2"
+      },
+      {
+        "S.No.": "2",
+        "Course Code": "HS 111",
+        "Course Title": "Urdu script and poetry",
+        "L": "3",
+        "T": "1",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Mohd. Mubashshir Ahsan",
+        "Time Slot Lecture": "M1,M2,M3\n",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "27",
+        "Seats left": "13"
+      },
+      {
+        "S.No.": "3",
+        "Course Code": "HS 112",
+        "Course Title": "Urdu poetry interpretation",
+        "L": "3",
+        "T": "1",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Mohd. Mubashshir Ahsan",
+        "Time Slot Lecture": "R1,R2,R3\n",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "39",
+        "Seats left": "1"
+      },
+      {
+        "S.No.": "8",
+        "Course Code": "HS 491-VII",
+        "Course Title": "Special Topics in HSS: Anthropology in the 21st Century ",
+        "L": "3",
+        "T": "0",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Rosa Maria Perez",
+        "Time Slot Lecture": "R1,R2",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "0",
+        "Seats left": "40",
+        "Remarks": "No data in IMS"
+      },
+      {
+        "S.No.": "6",
+        "Course Code": "HS 491-IX",
+        "Course Title": "Special Topics in HSS: Society, Culture and Politics",
+        "L": "3",
+        "T": "0",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Prashant Ingole",
+        "Time Slot Lecture": "N1,N2,N3\n",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "0",
+        "Seats left": "40",
+        "Remarks": "New Course"
+      },
+      {
+        "S.No.": "7",
+        "Course Code": "HS 491-X",
+        "Course Title": "Special Topics in HSS: Pride and Prejudice: A Critical Introduction to Sociology",
+        "L": "3",
+        "T": "0",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Aashish Xaxa",
+        "Time Slot Lecture": "F1,F2,F3",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "0",
+        "Seats left": "40",
+        "Remarks": "New Course"
+      },
+      {
+        "S.No.": "10",
+        "Course Code": "HS 507",
+        "Course Title": "Humanism, Anti-humanism, and Posthumanism",
+        "L": "3",
+        "T": "0",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Angus McBlane",
+        "Time Slot Lecture": "R1,R2,R3\n",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "29",
+        "Seats left": "11"
+      },
+      {
+        "S.No.": "11",
+        "Course Code": "HS 510",
+        "Course Title": "Perspectives on Indian Civilization",
+        "L": "3",
+        "T": "0",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Michel Danino",
+        "Time Slot Lecture": "E1,E2,E3\n",
+        "Cap": "40",
+        "Seats reserved for MA students": "30",
+        "Modified Cap": "10",
+        "Seats filled during pre-registration": "9",
+        "Seats left": "1"
+      },
+      {
+        "S.No.": "12",
+        "Course Code": "HS 517",
+        "Course Title": "Literary Experiment in European Modernism",
+        "L": "3",
+        "T": "0",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Arka Chattopadhyay",
+        "Time Slot Lecture": "M1,M2,M3\n",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "16",
+        "Seats left": "24"
+      },
+      {
+        "S.No.": "13",
+        "Course Code": "HS 519",
+        "Course Title": "Linguistic Anthropology",
+        "L": "3",
+        "T": "0",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Nishaant Choksi",
+        "Time Slot Lecture": "K1,K2,K3\n",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "23",
+        "Seats left": "17"
+      },
+      {
+        "S.No.": "15",
+        "Course Code": "HS 591-I",
+        "Course Title": "Special Topics in HSS: World Englishes",
+        "L": "3",
+        "T": "0",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Jooyoung Kim",
+        "Time Slot Lecture": "M1,M2,M3\n",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "12",
+        "Seats left": "28"
+      },
+      {
+        "S.No.": "16",
+        "Course Code": "HS 521",
+        "Course Title": "Special Topics in HSS: Development Economics",
+        "L": "3",
+        "T": "0",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Deepak Singhania",
+        "Time Slot Lecture": "K1,K2,K3\n",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "0",
+        "Seats left": "40",
+        "Remarks": "No data in IMS"
+      },
+      {
+        "S.No.": "17",
+        "Course Code": "HS 624",
+        "Course Title": "Tropes of Time and Topography: Select Fiction from South-Asia",
+        "L": "3",
+        "T": "0",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Arnapurna Rath",
+        "Time Slot Lecture": "R1,R2,R3\n",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "12",
+        "Seats left": "28"
+      },
+      {
+        "S.No.": "20",
+        "Course Code": "HS 691-III",
+        "Course Title": "Special Topics in HSS: Abnormal Psychology",
+        "L": "3",
+        "T": "0",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Frederick Coolidge",
+        "Time Slot Lecture": "Monday, Wednesday,Friday\n9 pm to 10 pm",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "0",
+        "Seats left": "40",
+        "Remarks": "No data in IMS"
+      },
+      {
+        "S.No.": "21",
+        "Course Code": "IN 304",
+        "Course Title": "Ancient Indian Technology",
+        "L": "3",
+        "T": "1",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Alok Kanungo",
+        "Time Slot Lecture": "N1,N2,N3\n",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "32",
+        "Seats left": "8"
+      },
+      {
+        "S.No.": "22",
+        "Course Code": "IN 491",
+        "Course Title": "Special Topics: Foundations of User Experience",
+        "L": "3",
+        "T": "0",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Nuno Guimaraes",
+        "Time Slot Lecture": "Thursday & Frday\n17:00–18:30",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "0",
+        "Seats left": "40",
+        "Remarks": "No data in IMS"
+      },
+      {
+        "S.No.": "22",
+        "Course Code": "MS 403",
+        "Course Title": "Engineering Entrepreneurship",
+        "L": "3",
+        "T": "0",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Raj Jaswa",
+        "Time Slot Lecture": "Tuesday & Wednesday\n8pm-9.30pm",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "39",
+        "Seats left": "1"
+      },
+      {
+        "S.No.": "26",
+        "Course Code": "MS 491-VI",
+        "Course Title": "Special Topics in Management: Entrepreneurship and New Ventures",
+        "L": "3",
+        "T": "0",
+        "P": "0",
+        "C": "4",
+        "Instructor": "Rajiv Joshi",
+        "Time Slot Lecture": "R2,R3\n",
+        "Cap": "40",
+        "Seats reserved for MA students": "0",
+        "Modified Cap": "40",
+        "Seats filled during pre-registration": "38",
+        "Seats left": "2"
+      }
     ]
   };
   courses = courses["Sheet1"];
   var course_list = [];
   var num_courses = courses.length;
-  for(var i=0;i<num_courses;i++){
-    course_list.push([courses[i]["Course Code"],courses[i]["Course Title"]]);
+  for (var i = 0; i < num_courses; i++) {
+    course_list.push([courses[i]["Course Code"], courses[i]["Course Title"]]);
   }
   var max_reg = 2;
-  var temp = '<div id="preference-1" class="post-box remove-padding">\n<div class="row widget-sidebar form-group">\n<p>\nPreference #1 <sup class="required">*</sup>\n <br>\n </p>\n <select class="form-control prefs" id="pref1" name="pref1" placeholder="Your Answer">\n <option value="-Select-">-Select-</option>\n   </select>\n  <p class="error-msg" id="pref1-error"></p>\n  </div>\n</div>';
+  var temp = '<div id="preference-1" class="post-box remove-padding">\n<div class="row widget-sidebar form-group">\n<p>\nPreference #1 <sup class="required">*</sup>\n <br>\n <span class="label-description">If the course is not in the list either you have selected it or its cap is already filled in Pre-Registration.</span>\n <br>\n </p>\n <select class="form-control prefs" id="pref1" name="pref1" placeholder="Your Answer">\n <option value="-Select-">-Select-</option>\n   </select>\n  <p class="error-msg" id="pref1-error"></p>\n  </div>\n</div>';
 
   $.fn.add_options = function (e) {
     $.each(course_list, function (index, value) {
-      $(e).append("<option value='" + value[0] + "'>" + value[0]+" - "+ value[1] + "</option>");
+      $(e).append("<option value='" + value[0] + "'>" + value[0] + " - " + value[1] + "</option>");
     });
   }
 
@@ -314,8 +404,7 @@
       $(this).css("border-width", error_width);
       $('#name-error').css("display", "block");
       $('#name-error').text("This is a required question");
-    }
-    else {
+    } else {
       $(this).css("border-color", border_color);
       $(this).css("border-width", border_width);
       $('#name-error').css("display", "none");
@@ -324,19 +413,17 @@
   });
 
   /*--/ Email /--*/
-  $('#email').change(function(){
-    if (!$('#email').val() || $('#email').val().substring($('#email').val().length-12)!='@iitgn.ac.in'){
+  $('#email').change(function () {
+    if (!$('#email').val() || $('#email').val().substring($('#email').val().length - 12) != '@iitgn.ac.in') {
       $('#email-error').css("display", "block");
       $('#email').css("border-color", error_color);
       $('#email').css("border-width", error_width);
-      if(!$('#email').val()){
+      if (!$('#email').val()) {
         $('#email-error').text("This is a required question");
-      }
-      else{
+      } else {
         $('#email-error').text("Invalid Email Address. You must provide your IITGN email address.");
       }
-    }
-    else{
+    } else {
       $('#email-error').css("display", "none");
       $('#email').css("border-color", border_color);
       $('#email').css("border-width", border_width);
@@ -354,23 +441,20 @@
         $(this).css("border-width", border_width);
         $('#roll-error').css("display", "none");
         $('#roll-error').text("");
-      }
-      else {
+      } else {
         $(this).css("border-color", error_color);
         $(this).css("border-width", error_width);
         $('#roll-error').css("display", "block");
         $('#roll-error').text("Invalid Input");
 
       }
-    }
-    else {
+    } else {
       if (!$('#roll').val()) {
         $(this).css("border-color", error_color);
         $(this).css("border-width", error_width);
         $('#roll-error').css("display", "block");
         $('#roll-error').text("This is a required question");
-      }
-      else {
+      } else {
         $(this).css("border-color", error_color);
         $(this).css("border-width", error_width);
         $('#roll-error').css("display", "block");
@@ -386,8 +470,7 @@
       $(this).css("border-width", error_width);
       $('#program-error').css("display", "block");
       $('#program-error').text("This is a required question");
-    }
-    else {
+    } else {
       $(this).css("border-color", border_color);
       $(this).css("border-width", border_width);
       $('#program-error').css("display", "none");
@@ -405,23 +488,20 @@
         $(this).css("border-width", border_width);
         $('#year-error').css("display", "none");
         $('#year-error').text("");
-      }
-      else {
+      } else {
         $(this).css("border-color", error_color);
         $(this).css("border-width", error_width);
         $('#year-error').css("display", "block");
         $('#year-error').text("Invalid Input");
 
       }
-    }
-    else {
+    } else {
       if (!$('#year').val()) {
         $(this).css("border-color", error_color);
         $(this).css("border-width", error_width);
         $('#year-error').css("display", "block");
         $('#year-error').text("This is a required question");
-      }
-      else {
+      } else {
         $(this).css("border-color", error_color);
         $(this).css("border-width", error_width);
         $('#year-error').css("display", "block");
@@ -455,19 +535,18 @@
   /*--/ Number of Courses /--*/
   $('#num-reg').attr("max", max_reg);
   $('#num-reg').change(function () {
-    if (($('#num-reg').val() >= 1 && $('#num-reg').val() <= max_reg) && ( $('#num-reg').val() <= $('#num-pref').val() )) {
+    if ((parseInt($('#num-reg').val()) >= 1 && parseInt($('#num-reg').val()) <= max_reg) && (parseInt($('#num-reg').val()) <= parseInt($('#num-pref').val()))) {
       $('#num-reg-error').css("display", "none");
       $('#num-reg-error').text("");
       $('#num-reg').css("border-color", border_color);
       $('#num-reg').css("border-width", border_width);
-      if($('#num-pref').val() >= 1 && $('#num-pref').val() <= num_courses){
+      if ($('#num-pref').val() >= 1 && $('#num-pref').val() <= num_courses) {
         $('#num-pref-error').css("display", "none");
         $('#num-pref-error').text("");
         $('#num-pref').css("border-color", border_color);
         $('#num-pref').css("border-width", border_width);
       }
-    }
-    else if ($('#num-reg').val() > $('#num-pref').val()){
+    } else if (parseInt($('#num-reg').val()) > parseInt($('#num-pref').val())) {
       $('#num-reg-error').css("display", "block");
       $('#num-reg-error').text("Number of required courses cannot exceed number of preferences");
       $('#num-reg').css("border-color", error_color);
@@ -476,8 +555,7 @@
       $('#num-pref-error').text("Number of required courses cannot exceed number of preferences");
       $('#num-pref').css("border-color", error_color);
       $('#num-pref').css("border-width", error_width);
-    }
-    else {
+    } else {
       $('#num-reg-error').css("display", "block");
       $('#num-reg-error').text("Value must be between 1 and " + max_reg);
       $('#num-reg').css("border-color", error_color);
@@ -490,9 +568,13 @@
   $('#num-pref').attr("max", num_courses);
   $.fn.add_options('#pref1');
   $.fn.add_options('#pref2');
+  $.fn.add_options('#pref3');
+  $.fn.add_options('#pref4');
   $(document).ready(function () {
     $('#pref1').select2();
     $('#pref2').select2();
+    $('#pref3').select2();
+    $('#pref4').select2();
   });
 
   $('#num-pref').change(function () {
@@ -501,7 +583,7 @@
       $('#num-pref-error').text("");
       $('#num-pref').css("border-color", border_color);
       $('#num-pref').css("border-width", border_width);
-      if ($('#num-reg').val() > $('#num-pref').val()){
+      if (parseInt($('#num-reg').val()) > parseInt($('#num-pref').val())) {
         $('#num-reg-error').css("display", "block");
         $('#num-reg-error').text("Number of required courses cannot exceed number of preferences");
         $('#num-reg').css("border-color", error_color);
@@ -510,13 +592,12 @@
         $('#num-pref-error').text("Number of required courses cannot exceed number of preferences");
         $('#num-pref').css("border-color", error_color);
         $('#num-pref').css("border-width", error_width);
-      }
-      else{
+      } else {
         $('#num-pref-error').css("display", "none");
         $('#num-pref-error').text("");
         $('#num-pref').css("border-color", border_color);
         $('#num-pref').css("border-width", border_width);
-        if($('#num-reg').val() >= 1 && $('#num-reg').val() <= max_reg){
+        if ($('#num-reg').val() >= 1 && $('#num-reg').val() <= max_reg) {
           $('#num-reg-error').css("display", "none");
           $('#num-reg-error').text("");
           $('#num-reg').css("border-color", border_color);
@@ -529,7 +610,7 @@
         while (v <= $(this).val()) {
           $("#preferences").append(temp);
           $("#preferences .post-box:last").attr("id", "preference-" + v);
-          $("#preference-" + v + " p:first").html("Preference #" + v + '<sup class="required">*</sup>');
+          $("#preference-" + v + " p:first").html("Preference #" + v + '<sup class="required">*</sup>\n <br>\n <span class="label-description">If the course is not in the list either you have selected it or its cap is already filled in Pre-Registration.</span>\n <br>\n ');
           $("#preference-" + v + " .form-control").attr("id", "pref" + v);
           $("#preference-" + v + " .form-control").attr("name", "pref" + v);
           $("#preference-" + v + " .error-msg").attr("id", "pref" + v + "-error");
@@ -537,8 +618,7 @@
           $('#pref' + v).select2();
           v = v + 1;
         };
-      }
-      else {
+      } else {
         var v = parseInt($(this).val(), 10);
         var w = prefs.length;
         while (w > v) {
@@ -546,8 +626,7 @@
           w -= 1;
         };
       }
-    }
-    else {
+    } else {
       $('#num-pref-error').css("display", "block");
       $('#num-pref-error').text("Number of course preferences must be between 1 and " + num_courses);
       $('#num-pref').css("border-color", error_color);
@@ -597,8 +676,7 @@
       $(this).css("border-width", error_width);
       $('#check-read-error').css("display", "block");
       $('#check-read-error').text("This is a required question");
-    }
-    else {
+    } else {
       $(this).css("border-color", border_color);
       $(this).css("border-width", border_width);
       $('#check-read-error').css("display", "none");
@@ -610,12 +688,12 @@
   /*--/ Form Validation /--*/
   /*************************/
 
-  $.fn.wait = function(e){
+  $.fn.wait = function (e) {
     e.preventDefault();
     return false;
   }
   // $('form').on('submit',function (e) {
-  $.fn.form_submit = function(e){
+  $.fn.form_submit = function (e) {
     e.preventDefault();
     var failed = false;
 
@@ -629,15 +707,14 @@
     }
 
     /* Validating Email */
-    if (!$('#email').val() || $('#email').val().substring($('#email').val().length-12)!='@iitgn.ac.in'){
+    if (!$('#email').val() || $('#email').val().substring($('#email').val().length - 12) != '@iitgn.ac.in') {
       failed = true;
       $('#email-error').css("display", "block");
       $('#email').css("border-color", error_color);
       $('#email').css("border-width", error_width);
-      if(!$('#email').val()){
+      if (!$('#email').val()) {
         $('#email-error').text("This is a required question");
-      }
-      else{
+      } else {
         $('#email-error').text("Invalid Email Address. You must provide your IITGN email address.");
       }
     }
@@ -650,12 +727,10 @@
       $('#roll').css("border-width", error_width);
       if (!$('#roll').val()) {
         $('#roll-error').text("This is a required question");
-      }
-      else {
+      } else {
         $('#roll-error').text("Invalid Input");
       }
-    }
-    else {
+    } else {
       $('#roll').change();
     }
 
@@ -666,15 +741,13 @@
       $('#program-error').text("This is a required question");
       $('#program').css("border-color", error_color);
       $('#program').css("border-width", error_width);
-    }
-    else if ($.inArray($('#program').val(), programs) == -1) {
+    } else if ($.inArray($('#program').val(), programs) == -1) {
       failed = true;
       $('#program-error').css("display", "block");
       $('#program-error').text("Invaid Input");
       $('#program').css("border-color", error_color);
       $('#program').css("border-width", error_width);
-    }
-    else {
+    } else {
       $('#program-error').css("display", "none");
       $('#program-error').text("");
       $('#program').css("border-color", border_color);
@@ -693,8 +766,7 @@
       $('#year').css("border-width", error_width);
       if (!$('#year').val()) {
         $('#year-error').text("This is a required question");
-      }
-      else {
+      } else {
         $('#year-error').text("Invalid Input");
       }
     }
@@ -716,7 +788,7 @@
     // }
 
     /* Number of Courses Required */
-    if ((!$.isNumeric($('#num-reg').val())) || ($('#num-reg').val() > max_reg) || ($('#num-reg').val() < 1)){
+    if ((!$.isNumeric($('#num-reg').val())) || ($('#num-reg').val() > max_reg) || ($('#num-reg').val() < 1)) {
       failed = true;
       $('#num-reg-error').css("display", "block");
       $('#num-reg-error').text("Value must be between 1 and " + max_reg);
@@ -724,8 +796,8 @@
       $('#num-reg').css("border-width", error_width);
     }
 
-    if ($('#num-reg').val()>$('#num-pref')){
-      failed= true;
+    if ($('#num-reg').val() > $('#num-pref')) {
+      failed = true;
       $('#num-reg-error').css("display", "block");
       $('#num-reg-error').text("Number of required courses cannot exceed number of preferences");
       $('#num-reg').css("border-color", error_color);
@@ -738,9 +810,9 @@
 
     var num_pref_invalid = false;
     /* Validating Number of Preferences */
-    if ((!$.isNumeric($('#num-pref').val())) || ($('#num-pref').val() > num_courses) || ($('#num-pref').val() < 1)){
+    if ((!$.isNumeric($('#num-pref').val())) || ($('#num-pref').val() > num_courses) || ($('#num-pref').val() < 1)) {
       failed = true;
-      num_pref_invalid= true;
+      num_pref_invalid = true;
       $('#num-pref-error').css("display", "block");
       $('#num-pref').css("border-color", error_color);
       $('#num-pref').css("border-width", error_width);
@@ -748,7 +820,7 @@
     }
 
     /* Validating Course Preferences */
-    if (!num_pref_invalid){
+    if (!num_pref_invalid) {
       var num_prefs = parseInt($('#num-pref').val(), 10);
       var i = 1;
       while (i <= num_prefs) {
@@ -759,7 +831,7 @@
           $('#pref' + i).css("border-color", error_color);
           $('#pref' + i).css("border-width", error_width);
           $('#pref' + i + '-error').text("Please select a course");
-          i+=1;
+          i += 1;
           continue;
         }
         while (j <= num_prefs) {
@@ -790,7 +862,9 @@
     }
 
     if (failed) {
-      $('html, body').animate({scrollTop: $("#main").offset().top}, 2000);
+      $('html, body').animate({
+        scrollTop: $("#main").offset().top
+      }, 2000);
       return false;
     }
     var form_data = {
@@ -799,7 +873,7 @@
       "Roll Number": $('#roll').val(),
       "Programme": $('#program').val(),
       "Year": $('#year').val(),
-      "Unique Code":$('#code').val(),
+      "Unique Code": $('#code').val(),
       "Number of courses to register": $('#num-reg').val(),
       "Number of Preferences": $('#num-pref').val(),
     };
@@ -810,43 +884,25 @@
       i += 1;
     }
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbygNCzWC1ShfWSrQ6rKcNqSb6wEoKEzGxXKcatfUJQsyFHuZdpHQFh8kIEcFsiNZ6cM/exec';
-    
-    $.get(scriptURL, form_data, function(response){
-      $('form').off('submit',$.fn.wait);
-      if(response.result=="success"){
-        swal("Success!", "Your response was recorded!", "success").then(value => {$('form').submit();});
-      }
-      else{
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwJquexfJlaFPT2KIE6QJwh00fGRPfpeGcQEsIauJFrZPaPvy_0KvhkrOvuyPiOu6J2/exec';
+
+    $.get(scriptURL, form_data, function (response) {
+      $('form').off('submit', $.fn.wait);
+      if (response.result == "success") {
+        swal("Success!", "Your response was recorded!", "success").then(value => {
+          $('form').submit();
+        });
+      } else {
         console.log(response.error);
-        $('form').on('submit',$.fn.form_submit);
+        $('form').on('submit', $.fn.form_submit);
         swal("Error!", "There was an error in submitting the form. Please try again.", "error");
       }
     });
 
-    // // Replace the code for GET request with this one in case of CORS error
-    // var jqxhr = $.ajax({
-    //   url: scriptURL,
-    //   method: "GET",
-    //   dataType: "json",
-    //   data: form_data
-    // })
-    // .then(function(response){
-    //   $('form').off('submit',$.fn.wait);
-    //   if(response.result=="success"){
-    //     swal("Success!", "Your response was recorded!", "success").then(value => {$('form').submit();});
-    //   }
-    //   else{
-    //     $('form').on('submit',$.fn.form_submit);
-    //     swal("Error!", "There was an error in submitting the form. Please try again.", "error");
-    //   }
-    // })
-    // .catch(err => console.log(err));
-
-    $('form').off('submit',$.fn.form_submit);
-    $('form').on('submit',$.fn.wait);
+    $('form').off('submit', $.fn.form_submit);
+    $('form').on('submit', $.fn.wait);
     return false;
   };
-  $('form').on('submit',$.fn.form_submit);
+  $('form').on('submit', $.fn.form_submit);
 
 })(jQuery);

@@ -7,27 +7,9 @@ This tool requires Python3. Run the following command to get all the required li
 pip install -r requirements.txt
 </pre>
 
-This tool involves three major components, which are required to be executed in the following order:
-- Unique Codes Generation
+This tool involves two major components, which are required to be executed in the following order:
 - Student Preferences Input Form
 - Allocation
-
-## Unique Code Generation
-Folder: `/generate_codes`
-
-This component deals with generating unique codes that act as a basic student authentication. These codes are shared to students by email and they are required to submit this code when they fill their preferences in the Student Preferences Input Form.
-
-*This requires an excel file containing Students Information. This path information must be mentioned in `config.yaml`.*
-
-Run the following command (inside the `/generate_codes` folder).
-<pre>
-python code_generation.py
-</pre>
-
-In case you need to generate a new code for a student for whom the code was not generated before, you can use the `code_addition.py` file.
-<pre>
-python code_addition.py
-</pre>
 
 ## Student Preferences Input Form
 Folder: `/form`

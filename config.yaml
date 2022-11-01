@@ -12,7 +12,7 @@ STUDENT_COURSES: "./students_data/Student Wise Courses HSS Registration 2021-22.
 STUDENT_FORM_DATA: "./students_data/HSS Pre-registration 2021-22.xlsx"
 # path to the file containing the students data collected through form
 
-COURSE_DATA: "./pre_registration_data/List of HSS Courses with Caps.xlsx"
+COURSE_DATA: "./courses_data/HSS Courses 2021-22 Sem1.xlsx"
 # path to the file containing the courses data
 
 ## OUTPUT FILES

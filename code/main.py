@@ -12,17 +12,11 @@ from tqdm import tqdm
 ###################################################################################################
 # reading config file for fetching paths
 paths = open("../config.yaml", 'r')
-paths_dictionary = yaml.load(paths)
+paths_dictionary = yaml.safe_load(paths)
 
 '''
 INPUT FILES
 '''
-STUDENTS_LIST = paths_dictionary["STUDENTS_LIST"]
-# path to the file containing the students roll numbers
-
-STUDENT_COURSES = paths_dictionary["STUDENT_COURSES"]
-# path to the file containing the course data taken by students
-
 STUDENT_FORM_DATA = paths_dictionary["STUDENT_FORM_DATA"]
 # path to the file containing the students data
 
@@ -66,14 +60,7 @@ def ham_dist(s1, s2):
 
 
 def get_input():
-    student_list = pd.read_excel(STUDENTS_LIST).dropna()
-    student_list['Roll No'] = student_list['Roll No'].astype(int)
-    # dataframe of student unique codes
-    student_course_list = pd.read_excel(STUDENT_COURSES).dropna()
-
-    student_vs_course_taken = {i["Roll No"]: list(student_course_list[student_course_list["Roll No"] == i["Roll No"]]["PreCourseNo"].values)
-                               for ind, i in student_list.iterrows()}
-
+    
     # dictionary<student roll : list of [code filled by student, actual code shared]>
     cours = pd.read_excel(COURSE_DATA).fillna("")
     # dataframe of course data
@@ -90,10 +77,6 @@ def get_input():
     # iterating over students df to take input into list of student objects after validation
     for ind, i in studs.iterrows():
 
-        # if the roll number recieved through form is not present in the students list whoever received the unique codes or if he/she is a first year student
-        if (i["Roll Number"] not in student_vs_course_taken) or str(int(i["Roll Number"]))[:4] == "2011":
-            continue
-
         # fetch the latest input recieved from each student based on time stamp and construct student objects to store in a list
         if (((i["Roll Number"] in students_data) and (students_data[i["Roll Number"]]["Timestamp"] < i["Timestamp"])) or (i["Roll Number"] not in students_data)):
             students_data[i["Roll Number"]] = {
@@ -104,7 +87,7 @@ def get_input():
                 "Number of courses to register": min([int(i["Number of courses to register"]), int(i["Number of Preferences"]), 2]),
                 "Number of Preferences": int(i["Number of Preferences"]),
                 "Courses": [i["Preference #"+str(j+1)].strip() for j in range(int(i["Number of Preferences"]))],
-                "Alloted": student_vs_course_taken[i["Roll Number"]]
+                "Alloted": []
             }
 
     students = [
